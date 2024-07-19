@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Sidebar Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-y: auto;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 16px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            width: calc(100% - 250px);
+        }
+        .section {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <a onclick="scrollToSection('home')">Home</a>
+    <a onclick="scrollToSection('services')">Services</a>
+    <a onclick="scrollToSection('clients')">Clients</a>
+    <a onclick="scrollToSection('contact')">Contact</a>
+</div>
+
+<div class="content">
+    <div id="home" class="section">
+        <h2>Home</h2>
+        <p>Welcome to our website!</p>
+        <p>Welcome to our website!</p>
+        <p>Welcome to our website!</p>
+        <p>Welcome to our website!</p>
+        <p>Welcome to our website!</p>
+        <p>Welcome to our website!</p>
+        <p>Welcome to our website!</p>
+    </div>
+    <div id="services" class="section">
+        <h2>Services</h2>
+        <p>Here are the services we offer.</p>
+        <p>Here are the services we offer.</p>
+        <p>Here are the services we offer.</p>
+        <p>Here are the services we offer.</p>
+        <p>Here are the services we offer.</p>
+        <p>Here are the services we offer.</p>
+        <p>Here are the services we offer.</p>
+    </div>
+    <div id="clients" class="section">
+        <h2>Clients</h2>
+        <p>These are some of our valued clients.</p>
+        <p>These are some of our valued clients.</p>
+        <p>These are some of our valued clients.</p>
+        <p>These are some of our valued clients.</p>
+        <p>These are some of our valued clients.</p>
+        <p>These are some of our valued clients.</p>
+        <p>These are some of our valued clients.</p>
+    </div>
+    <div id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Get in touch with us.</p>
+    </div>
+</div>
+
+<script>
+    function scrollToSection(id) {
+        document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
